@@ -22,11 +22,16 @@ function Navbar() {
         <ul className={styles.navLinks}>
           {/* <li><a href="#" className={activeItem === 'Home' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Home')}>Home</a></li> */}
           {/* <li><a href="#" className={activeItem === 'Quote' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Quote')}>Quote</a></li> */}
-          <li><Link to="/" className={styles.navLink}>Home</Link></li>
-          <li><Link to="/quote" className={styles.navLink}>Quote</Link></li>
+          {/* <li><Link to="/" className={activeItem === 'Restaurant' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Restaurant')}>Home</Link></li>
+          <li><Link to="/quote" className={activeItem === 'Restaurant' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Restaurant')}>Quote</Link></li>
           <li><a href="#" className={activeItem === 'Restaurant' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Restaurant')}>Restaurant</a></li>
           <li><a href="#" className={activeItem === 'Foods' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Foods')}>Foods</a></li>
-          <li><a href="#" className={activeItem === 'Contact' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Contact')}>Contact</a></li>
+          <li><a href="#" className={activeItem === 'Contact' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Contact')}>Contact</a></li> */}
+        <li><Link to="/" className={activeItem === 'Home' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Home')}>Home</Link></li>
+      <li><Link to="/quote" className={activeItem === 'Quote' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Quote')}>Quote</Link></li>
+      <li><Link to="/restaurant" className={activeItem === 'Restaurant' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Restaurant')}>Restaurant</Link></li>
+      <li><Link to="/foods" className={activeItem === 'Foods' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Foods')}>Foods</Link></li>
+      <li><Link to="/contact" className={activeItem === 'Contact' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Contact')}>Contact</Link></li>
         </ul>
       </nav>
       <button className={styles.getStarted}>Get Started</button>
