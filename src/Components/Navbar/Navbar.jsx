@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from '../Navbar/Navbar.module.css';
 import logo from '../Assets/logo.png';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -19,8 +20,10 @@ function Navbar() {
       <img src={logo} className={styles.logo} alt="" />
       <nav className={`${styles.navCenter} ${showMenu ? styles.showMenu : ''}`}>
         <ul className={styles.navLinks}>
-          <li><a href="#" className={activeItem === 'Home' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Home')}>Home</a></li>
-          <li><a href="#" className={activeItem === 'Quote' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Quote')}>Quote</a></li>
+          {/* <li><a href="#" className={activeItem === 'Home' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Home')}>Home</a></li> */}
+          {/* <li><a href="#" className={activeItem === 'Quote' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Quote')}>Quote</a></li> */}
+          <li><Link to="/" className={styles.navLink}>Home</Link></li>
+          <li><Link to="/quote" className={styles.navLink}>Quote</Link></li>
           <li><a href="#" className={activeItem === 'Restaurant' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Restaurant')}>Restaurant</a></li>
           <li><a href="#" className={activeItem === 'Foods' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Foods')}>Foods</a></li>
           <li><a href="#" className={activeItem === 'Contact' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Contact')}>Contact</a></li>
