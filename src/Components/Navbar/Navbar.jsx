@@ -1,25 +1,29 @@
-import  { useState } from 'react';
+import React, { useState } from 'react';
 import styles from '../Navbar/Navbar.module.css';
 import logo from '../Assets/logo.png';
+
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
+  const [activeItem, setActiveItem] = useState('Home');
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
+  const handleItemClick = (itemName) => {
+    setActiveItem(itemName);
+  };
+
   return (
     <div className={styles.navbar}>
-      {/* <a href="#" className={styles.logo}>GeekFoods</a>   */}
       <img src={logo} className={styles.logo} alt="" />
       <nav className={`${styles.navCenter} ${showMenu ? styles.showMenu : ''}`}>
         <ul className={styles.navLinks}>
-          <li><a href="#" className='active'>Home</a></li>
-          <li><a href="#">Quote</a></li>
-         
-          <li><a href="#">Restaurant</a></li>
-          <li><a href="#">Foods</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#" className={activeItem === 'Home' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Home')}>Home</a></li>
+          <li><a href="#" className={activeItem === 'Quote' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Quote')}>Quote</a></li>
+          <li><a href="#" className={activeItem === 'Restaurant' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Restaurant')}>Restaurant</a></li>
+          <li><a href="#" className={activeItem === 'Foods' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Foods')}>Foods</a></li>
+          <li><a href="#" className={activeItem === 'Contact' ? `${styles.navLink} ${styles.active}` : styles.navLink} onClick={() => handleItemClick('Contact')}>Contact</a></li>
         </ul>
       </nav>
       <button className={styles.getStarted}>Get Started</button>
@@ -33,4 +37,3 @@ function Navbar() {
 }
 
 export default Navbar;
-

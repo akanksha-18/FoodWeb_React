@@ -15,6 +15,13 @@
   color: white;
 }
 
+.navLink.active {
+  color: #8db5f9; 
+}
+
+.navLink.active:hover {
+  color: #8db5f9; 
+}
 .logo {
   color: white;
   text-decoration: none;
@@ -34,6 +41,7 @@
   display: flex;
   
 }
+
 
 .open {
   transform: rotate(-45deg);
@@ -69,6 +77,7 @@
 }
 
 @media (max-width: 768px) {
+  
   .navLinks {
     background-color: #251e1e;
     padding: 10px 0;

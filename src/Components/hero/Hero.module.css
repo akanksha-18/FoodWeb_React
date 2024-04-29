@@ -69,9 +69,10 @@
     }
   
     .textContainer {
-      position: static;
+      position: absolute;
       transform: none;
       text-align: center;
+      width: fit-content;
       padding: 20px;
     }
   
@@ -80,8 +81,8 @@
     }
   
     .heroSubtitle {
-      font-size: 1.2em;
-      color: black;
+      font-size: 1em;
+      color: white;
     }
   }
   
